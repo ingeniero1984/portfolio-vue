@@ -3,28 +3,33 @@
     <div class="row">
       <div class="col-md-6">
         <div class="about">
-          <h1 class="line-after">Sobre mí</h1>
+          <h1 class="line-after">About Me</h1>
+          <h4 class="mt-4">Hey 👋</h4>
           <p>
-            Soy Ingeniero de sistemas, con mas de 3 años de experiencia desarrollando aplicaciones web de manera empírica y profesional.
-            </p>
-            <p>Soy Desarrollador de software en la empresa <a href="https://www.insoftar.com/" target="_blank">Insoftar S.A.S </a>, Me apaciona las ganas de aprender y conocer nuevas tecnologías, trabajando en proyectos profesionales usando el Framework Vue, Angular, Laravel como API REST, Librerias como Jquery y buen manejo del control de versiones GIT.
-        <br />
+            My name is Asaolu Elijah, I am a <b>front-end developer</b> and
+            <b>technical writer</b>. Currently studying Computer Science at
+            <u>OAUSTECH</u>.
           </p>
-          <h4 class="mt-5">Tecnologías</h4>
-          <p>A continuación se muestran algunas de las tecnologías que uso a diario:</p>
+          <p>
+            I have <b>{{ currYear - startYear }}+ years experience</b> in
+            crafting beautiful web and mobile interfaces. Plus I am an agile
+            learner, I learn new cool stuffs everyday.
+          </p>
+          <h4 class="mt-5">Tech Stacks</h4>
+          <p>Below are some of the technologies I use daily:</p>
           <div class="row animate__animated animate__fadeInUp">
             <div class="col">
               <ul style="list-style-type: circle;">
                 <li>HTML & CSS</li>
-                <li>Javascript</li>
+                <li>Node.js</li>
                 <li>PHP</li>
               </ul>
             </div>
             <div class="col">
               <ul style="list-style-type: circle;">
-                <li>Angular</li>
+                <li>JavaScript</li>
                 <li>Vue.js</li>
-                <li>Laravel</li>
+                <li>WordPress</li>
               </ul>
             </div>
           </div>
