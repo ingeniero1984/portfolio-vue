@@ -1,41 +1,46 @@
 <template>
-  <b-navbar toggleable="lg" fixed="top" type="light" variant="light">
-    <b-navbar-brand tag="h1" to="/" style="font-weight: bolder;"
-      >> AE.</b-navbar-brand
-    >
-    <b-navbar-toggle
-      target="nav-collapse"
-      style="border-radius: 0;"
-    ></b-navbar-toggle>
+  <b-container>
+    <b-navbar toggleable="lg" fixed="top" type="light" variant="light">
+      <b-navbar-brand tag="h1" to="/" style="font-weight: bolder;"
+        >< Ing. Lermy Ferrer Peralta /></b-navbar-brand
+      >
+      <b-navbar-toggle
+        target="nav-collapse"
+        style="border-radius: 0;"
+      ></b-navbar-toggle>
 
-    <b-collapse id="nav-collapse" is-nav class="animate__animated animate__fadeInDown">
-      <b-navbar-nav>
-        <b-nav-item to="/">Home</b-nav-item>
-        <b-nav-item to="/about">About</b-nav-item>
-        <b-nav-item to="/projects">Projects</b-nav-item>
-        <b-nav-item to="/articles">Articles</b-nav-item>
-        <b-nav-item to="/contact">Contact Me</b-nav-item>
-        <b-nav-item
-          href="#"
-          v-if="themeMode == 'dark'"
-          @click="toggleDarkMode"
-          class="moon-icon"
-          title="Toggle Darkmode"
-        >
+      <b-collapse
+        id="nav-collapse"
+        is-nav
+        class="animate__animated animate__fadeInDown"
+      >
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item
+            href="#"
+            v-if="themeMode == 'dark'"
+            @click="toggleDarkMode"
+            class="moon-icon"
+            title="Toggle Darkmode"
+          >
+            <MoonIcon style="color: #000;font-size: 20px;" />
+          </b-nav-item>
+          <b-nav-item
+            href="#"
+            v-else
+            @click="toggleDarkMode"
+            class="moon-icon"
+            title="Toggle Darkmode"
+          > 
           <SunnyIcon style="color: #eee;font-size: 20px;" />
-        </b-nav-item>
-        <b-nav-item
-          href="#"
-          v-else
-          @click="toggleDarkMode"
-          class="moon-icon"
-          title="Toggle Darkmode"
-        >
-          <MoonIcon style="color: #000;font-size: 20px;" />
-        </b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+          </b-nav-item>
+          <b-nav-item to="/">Inicio</b-nav-item>
+          <b-nav-item to="/about">Sobre mí</b-nav-item>
+          <b-nav-item to="/projects">Tecnologías</b-nav-item>
+          <b-nav-item to="/contact">Contactame</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </b-container>
 </template>
 
 <script>
@@ -77,7 +82,7 @@ export default {
       }
     }
   },
-  mounted(){
+  mounted() {
     this.themeMode = localStorage.themeMode;
   }
 };
@@ -92,9 +97,9 @@ export default {
   }
 }
 .nav-item {
-  font-size: 14px;
+  font-size: 16px;
   margin: 15px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .nav-link a {
   color: #000 !important;

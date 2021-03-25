@@ -1,67 +1,46 @@
 <template>
   <b-row style="margin-left: 0;margin-right: 0;">
-    <b-col md="4">
+    <b-col md="12">
       <b-img
         :src="avatar"
-        id="avatar-img"
-        alt="Asaolu Elijah Memoji"
-        @mouseenter="changeAvatar"
-        @mouseleave="changeAvatar"
+        alt="Lermy Ferrer"
+        img="@/assets/LermyNew.png"
       />
     </b-col>
-    <b-col md="8">
-      <h2 class="intro animate__animated animate__fadeInUp animate__fast">
-        Hi 👋,
-        <br />I<span>'m Asaolu&nbsp;Elijah</span>.
-      </h2>
-      <div class="col-md-10 info">
-        A <b>front-end developer</b> and <b>technical writer</b> passionate
-        about solving problems with tech.<br />
-        I am skilled with building exceptional <b>websites</b> and
-        <b>mobile applications</b>, and currently i'm exploring the AI
-        (Artificial Intelligence) ecosystem.
-        <br />
-        <b-button
-          class="action-btn animate__animated animate__wobble animate__delay-4s animate__fast"
-          to="/projects"
-          >Explore ></b-button
-        >
-        <b-button class="action-btn" to="/contact" variant="primary"
-          >Get In Touch</b-button
-        >
+    <b-col md="12">
+      <h4 class="text-center intro animate__animated animate__fadeInUp animate__fast">
+        Hola,
+        <br />Soy Lermy Ferrer Peralta.
+      </h4>
+      <h4 class="text-center">Web developer</h4>
+      <div class="col-md-12 info">
+        
         <div
-          class="social-icons animate__animated animate__fadeInUp animate__delay-1s"
+          class="text-center social-icons animate__animated animate__fadeInUp animate__delay-1s"
         >
           <a
-            href="http://github.com/asaoluelijah"
+            href="http://github.com/ingeniero1984"
             target="_blank"
             rel="noopener"
           >
             <GithubIcon />
           </a>
           <a
-            href="https://ng.linkedin.com/in/asaolu-elijah-1070101b0"
+            href="www.linkedin.com/in/ing-lermy-ferrer-6a620668"
             target="_blank"
             rel="noopener"
           >
             <LinkedinIcon />
           </a>
           <a
-            href="https://twitter.com/asaolu_elijah"
+            href="https://twitter.com/Lermyferrer"
             target="_blank"
             rel="noopener"
           >
             <TwitterIcon />
           </a>
           <a
-            href="https://facebook.com/asaoluelijah01"
-            target="_blank"
-            rel="noopener"
-          >
-            <FacebookIcon />
-          </a>
-          <a
-            href="mailto:info4a.elijah@gmail.com"
+            href="mailto:ingeniero.lermy84@gmail.com"
             target="_blank"
             rel="noopener"
           >
@@ -77,14 +56,13 @@
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
 import LinkedinIcon from "vue-ionicons/dist/logo-linkedin.vue";
 import TwitterIcon from "vue-ionicons/dist/logo-twitter.vue";
-import FacebookIcon from "vue-ionicons/dist/logo-facebook.vue";
 import MailIcon from "vue-ionicons/dist/md-mail.vue";
 export default {
   name: "Home",
-  components: { GithubIcon, LinkedinIcon, TwitterIcon, FacebookIcon, MailIcon },
+  components: { GithubIcon, LinkedinIcon, TwitterIcon, MailIcon },
   data() {
     return {
-      avatar: require("@/assets/avatar-1.webp")
+      avatar: require("@/assets/LermyNew.png")
     };
   },
   head: {
@@ -109,15 +87,7 @@ export default {
       { hid: "og:image", name: "og:image", content: require("@/assets/coding.png") }
     ]
   },
-  methods: {
-    changeAvatar() {
-      if (this.avatar == require("@/assets/avatar-2.webp")) {
-        this.avatar = require("@/assets/avatar-1.webp");
-      } else {
-        this.avatar = require("@/assets/avatar-2.webp");
-      }
-    }
-  },
+  methods: {},
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();
@@ -147,12 +117,12 @@ export default {
 img {
   background-color: rgb(46, 42, 42);
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   cursor: pointer;
 }
 .social-icons {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .social-icons a {
   font-size: 25px;
@@ -164,9 +134,7 @@ img {
 }
 .intro {
   font-size: 45px;
-  font-weight: bolder;
   text-align: left;
-  margin-left: 20px;
   margin-top: 20px;
   /* color: #000; */
 }
